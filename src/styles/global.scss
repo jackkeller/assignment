@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import 'includes';
 
 body {
+  background: var(--background-page);
+  font: var(--font-base);
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,55 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+// Layout
+.layout {
+  display: grid;
+  grid-gap: var(--spacing-content);
+  grid-template-areas: 'header' 'content';
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--header-height) 1fr;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: rem($lg);
+  padding: var(--content-padding);
+  width: 100%;
+}
+
+header {
+  align-items: center;
+  background: var(--background-header);
+  display: flex;
+  grid-area: header;
+  height: var(--header-height);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+main {
+  grid-area: content;
+}
+
+// Elements
+h1 {
+  font: var(--heading1);
+}
+
+a {
+  color: var(--color-link);
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
 }

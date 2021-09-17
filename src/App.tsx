@@ -1,40 +1,34 @@
-/**
- * Remove this content and start here
- */
+import PropertyList from 'components/PropertyList';
+import React, { FC } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import heartFill from './assets/heart-fill.svg';
-import heartStroke from './assets/heart-stroke.svg';
+import Home from './components/Home';
 
-function App() {
+const App: FC<unknown> = () => {
   return (
-    <div
-      style={{
-        maxWidth: '70%',
-        padding: '1em',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        background: '#eee',
-      }}
-    >
-      <h1>Side React Take-home Assignment</h1>
-      <p>
-        Welcome to the Side React take-home assignment. This boilerplate is
-        intended to help get you started. It's already setup with the fonts and
-        SVG assets you will need to complete your assignment.
-      </p>
-      <p>
-        <em>
-          Be sure to read through the INSTRUCTIONS.md content before beginning.
-          Good luck!
-        </em>
-      </p>
-      <div>
-        <div>Here are the SVG assets you will need.</div>
-        <img src={heartFill} className="App-logo" alt="favorite icon" />
-        <img src={heartStroke} className="App-logo" alt="unfavorite icon" />
-      </div>
+    <div className="layout">
+      <header>
+        <div className="container">
+          <h1>Property Listings</h1>
+        </div>
+      </header>
+      <main>
+        <div className="container">
+          <Switch>
+            <Route exact path="/">
+              <Home linkText="Property listings" linkPath="property-listings">
+                Welcome to <strong>Fictitious Agency</strong> for property listings. Click the link
+                below to get browse available listings.
+              </Home>
+            </Route>
+            <Route path="/property-listings">
+              <PropertyList text="properties" />
+            </Route>
+          </Switch>
+        </div>
+      </main>
     </div>
   );
-}
+};
 
 export default App;

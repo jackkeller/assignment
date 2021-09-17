@@ -1,0 +1,37 @@
+@import 'utils';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+// Breakpoints
+$xs: 320;
+$sm: 480;
+$md: 768;
+$lg: 1200;
+
+:root {
+  --background-header: #F4F4F4;
+  --background-page: #fff;
+  --border-radius: #{rem(4)};
+  --content-padding: #{rem(8)};
+  --font-base-size: #{rem(15)};
+  --font-base: 400 var(--font-base-size)/var(--lineheight-base-size) var(--font-family);
+  --font-family: 'Open Sans', sans-serif;
+  --header-height: #{rem(65)};
+  --heading1: 600 #{rem(14)}/#{rem(40)} var(--font-family);
+  --lineheight-base-size: #{rem(32)};
+  --spacing-content: #{rem(20)};
+  --color-text: #2d2d2d;
+  --color-link: #299;
+  --color-link-hover: #599;
+
+  @include query($md) {
+    --header-height: #{rem(100)};
+    --heading1: 600 #{rem(28)}/#{rem(40)} var(--font-family);
+    --spacing: #{rem(40)};
+  }
+
+  @include query($lg) {
+    --content-padding: 0;
+    --heading1: 600 #{rem(28)}/#{rem(40)} var(--font-family);
+    --spacing: #{rem(60)};
+  }
+}

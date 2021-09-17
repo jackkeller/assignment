@@ -21,7 +21,6 @@ read directory
 echo ""
 
 mkdir -p src/$directory/$component
-# echo "export { default as $component } from './$directory/$component';" >> ./src/index.js
 cd src/$directory/$component
 
 

@@ -12,7 +12,7 @@
     "eject": "react-scripts eject",
     "gen": "./gen/component.sh",
     "format": "prettier --write src/**/*.{tsx,scss}",
-    "lint": "tslint -c tslint.json src/**/*.ts{,x}"
+    "lint": "tslint -c tslint.json src/**/*.{ts{,x}"
   },
   "repository": "https://github.com/jackkeller/assignment.git",
   "author": "Jack Keller",
