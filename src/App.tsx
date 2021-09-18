@@ -22,7 +22,7 @@ const App: FC<unknown> = () => {
               </Home>
             </Route>
             <Route path="/property-listings">
-              <PropertyList text="properties" />
+              <PropertyList />
             </Route>
           </Switch>
         </div>

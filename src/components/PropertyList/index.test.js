@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import PropertyList from './index';
+import { BrowserRouter } from 'react-router-dom';
 
 const setup = (customProps ={}) => {
   const defaultProps = {};
   const props = { ...defaultProps, ...customProps };
-  return render(<PropertyList {...props} />);
+  return render(<BrowserRouter><PropertyList {...props} /></BrowserRouter>);
 };
 
 beforeEach(() => {
@@ -14,9 +15,9 @@ beforeEach(() => {
 
 describe('PropertyListings', () => {
 
-  it('should render the text PropertyListings in the document', () => {
-    const { getByText } = setup({ text: 'PropertyListings' });
-    expect(getByText('PropertyListings')).toBeInTheDocument();
+  it('should render the properties container', () => {
+    const { getByTestId } = setup();
+    expect(getByTestId('properties')).toBeInTheDocument();
   });
 
 });
