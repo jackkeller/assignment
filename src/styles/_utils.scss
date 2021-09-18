@@ -4,9 +4,7 @@
 
   @if $neg==true {
     @return -#{$rem-size}rem;
-  }
-
-  @else {
+  } @else {
     @return #{$rem-size}rem;
   }
 }
@@ -16,21 +14,13 @@
 
   @if ($size==320) {
     $max: $sm - 1;
-  }
-
-  @else if ($size==577) {
+  } @else if ($size==577) {
     $max: $md - 1;
-  }
-
-  @else if ($size==768) {
+  } @else if ($size==768) {
     $max: $lg - 1;
-  }
-
-  @else if ($size==992) {
+  } @else if ($size==992) {
     $max: $xl - 1;
-  }
-
-  @else {
+  } @else {
     $max: ($size - 1);
   }
 
@@ -38,15 +28,11 @@
     @media screen and (max-width: #{$max+'px'}) {
       @content;
     }
-  }
-
-  @else if $boundary== 'only' {
+  } @else if $boundary== 'only' {
     @media screen and (min-width: #{$size+'px'}) and (max-width: #{$max+'px'}) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @media screen and (min-width: #{$size+'px'}) {
       @content;
     }

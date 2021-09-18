@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 interface HomeProps {
@@ -7,8 +7,12 @@ interface HomeProps {
 }
 
 const Home: FC<HomeProps> = ({ linkText, linkPath, children }) => {
+  useEffect(() => {
+    document.title = 'Fictitious Agency';
+  }, []);
+
   return (
-    <div className='home container'>
+    <div className="home container">
       <p>{children}</p>
       <Link to={`/${linkPath}`}>{linkText}</Link>
     </div>

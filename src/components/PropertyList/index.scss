@@ -1,5 +1,35 @@
 @import 'src/styles/includes';
 
-.propertylist {
-  // yay!
+.properties {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: var(--grid-template-columns);
+}
+
+.property {
+  &-photo {
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 75%;
+    width: 100%;
+  }
+
+  &-info {
+    padding: var(--spacing-content) 0;
+
+    &-details {
+      font-size: var(--spacing5);
+      font-weight: 600;
+      padding-bottom: var(--spacing2);
+    }
+
+    &-address {
+      text-transform: capitalize;
+    }
+
+    &-listed {
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 export interface Properties {
   address: Address;
   listPrice: number;
+  listDate: string;
   mlsId: number;
   photos: Photos;
   property: Property;
@@ -11,7 +12,6 @@ interface Property {
   bathsFull: number;
   bathsHalf: number;
   bedrooms: number;
-  listDate: string;
 }
 
 interface Address {

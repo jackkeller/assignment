@@ -14,7 +14,6 @@ beforeEach(() => {
 });
 
 describe('Home', () => {
-
   it('should render a link in the document', () => {
     const { getByText } = setup({ linkText: 'Home', linkPath: 'some_page' });
     const link = getByText('Home');

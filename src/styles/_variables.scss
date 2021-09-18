@@ -8,22 +8,33 @@ $md: 768;
 $lg: 1200;
 
 :root {
-  --background-header: #F4F4F4;
+  --background-header: #f4f4f4;
   --background-page: #fff;
   --border-radius: #{rem(4)};
+  --color-link-hover: #599;
+  --color-link: #299;
+  --color-text: #2d2d2d;
+  --color-text-secondary: #979797;
   --content-padding: #{rem(8)};
   --font-base-size: #{rem(15)};
-  --font-base: 400 var(--font-base-size)/var(--lineheight-base-size) var(--font-family);
+  --font-base: 400 var(--font-base-size) / var(--lineheight-base-size)
+    var(--font-family);
   --font-family: 'Open Sans', sans-serif;
+  --grid-gap: var(--spacing-content);
+  --grid-template-columns: repeat(1, 1fr);
   --header-height: #{rem(65)};
   --heading1: 600 #{rem(14)}/#{rem(40)} var(--font-family);
+  --heading3: 700 #{rem(26)}/#{rem(24)} var(--font-family);
   --lineheight-base-size: #{rem(32)};
   --spacing-content: #{rem(20)};
-  --color-text: #2d2d2d;
-  --color-link: #299;
-  --color-link-hover: #599;
+  --spacing1: #{rem(4)};
+  --spacing2: #{rem(8)};
+  --spacing3: #{rem(12)};
+  --spacing4: #{rem(16)};
+  --spacing5: var(--spacing-content);
 
   @include query($md) {
+    --grid-template-columns: repeat(2, 1fr);
     --header-height: #{rem(100)};
     --heading1: 600 #{rem(28)}/#{rem(40)} var(--font-family);
     --spacing: #{rem(40)};
@@ -31,6 +42,7 @@ $lg: 1200;
 
   @include query($lg) {
     --content-padding: 0;
+    --grid-template-columns: repeat(3, 1fr);
     --heading1: 600 #{rem(28)}/#{rem(40)} var(--font-family);
     --spacing: #{rem(60)};
   }

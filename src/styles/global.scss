@@ -3,6 +3,7 @@
 body {
   background: var(--background-page);
   font: var(--font-base);
+  min-width: rem($xs);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,6 +55,10 @@ main {
 // Elements
 h1 {
   font: var(--heading1);
+}
+
+h3 {
+  font: var(--heading3);
 }
 
 a {
