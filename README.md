@@ -8,14 +8,14 @@
 ---
 # Todos
 - ## Design
-  - [ ] Responsive Design
-  - [ ] Global Sticky Header
-  - [ ] Main Content Area
+  - [x] Responsive Design
+  - [x] Global Sticky Header
+  - [x] Main Content Area
   - [ ] Semantic Markup
-  - [ ] Reference [Figma Mock](https://www.figma.com/file/YZyIbis7fMsKnE2KaRlhYc/Sample-Project-Engineering?node-id=0%3A1) for styling decisions
+  - [x] Reference [Figma Mock](https://www.figma.com/file/YZyIbis7fMsKnE2KaRlhYc/Sample-Project-Engineering?node-id=0%3A1) for styling decisions
 - ## Development
-  - [ ] Interface for API Data
-  - [ ] Fetch API Data
-  - [ ] Cache Data using LocalStorage
+  - [x] Interface for API Data
+  - [x] Fetch API Data
+  - [x] Cache Data using LocalStorage
   - [ ] Add a way for users to Favorite a Listing
 
