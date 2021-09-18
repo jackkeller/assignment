@@ -1,0 +1,13 @@
+@import 'src/styles/variables';
+
+.favorite {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: rem(30);
+  justify-content: center;
+  position: absolute;
+  right: var(--spacing2);
+  top: var(--spacing2);
+  width: rem(30);
+}

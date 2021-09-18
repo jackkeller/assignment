@@ -8,6 +8,7 @@ interface HomeProps {
 
 const Home: FC<HomeProps> = ({ linkText, linkPath, children }) => {
   useEffect(() => {
+    // Terrible Use of this Hook
     document.title = 'Fictitious Agency';
   }, []);
 

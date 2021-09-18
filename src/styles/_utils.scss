@@ -41,11 +41,11 @@
 
 // Custom Scrollbars
 @mixin scrollbars(
-  $size: rem(12),
-  $foreground-color: grey,
-  $background-color: white,
-  $foreground-color-hover: black,
-  $firefox-background: grey
+  $size: var(--spacing2),
+  $foreground-color: var(--color-text-secondary),
+  $background-color: var(--background-header),
+  $foreground-color-hover: var(--color-text),
+  $firefox-background: var(--color-text-secondary)
 ) {
   scrollbar-color: var(--color-grey-variant) $firefox-background;
   scrollbar-width: thin; // Firefox does not "do" values for width

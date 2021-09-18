@@ -6,6 +6,7 @@ import {
   formatListingPrice,
   formatDate
 } from 'utilities';
+import Favorite from 'components/Favorite';
 import './index.scss';
 
 const PropertyList: FC<unknown> = () => {
@@ -19,6 +20,7 @@ const PropertyList: FC<unknown> = () => {
       : getListings();
 
     async function getListings() {
+      // Messy way to handle auth, probably should use ENVS
       const h = new Headers();
       h.append(
         'Authorization',
@@ -32,6 +34,7 @@ const PropertyList: FC<unknown> = () => {
       });
       const data = await response.json();
 
+      // Would remove before production, this is to ensure the call is not made after data cached
       console.log('API Response:', response.status);
 
       localStorage.setItem('properties', JSON.stringify(data));
@@ -46,7 +49,9 @@ const PropertyList: FC<unknown> = () => {
           <div
             className="property-photo"
             style={{ backgroundImage: `url(${p.photos[0]})` }}
-          ></div>
+          >
+            <Favorite listingId={p.listingId} />
+          </div>
           <div className="property-info">
             <div className="property-info-details">
               {p.property.bedrooms ? (
@@ -61,7 +66,9 @@ const PropertyList: FC<unknown> = () => {
                 <span>{formatNums(p.property.area)} Sq Ft</span>
               ) : null}
             </div>
-            <h3>{formatListingPrice(p.listPrice)}</h3>
+            <div className="property-info-price">
+              {formatListingPrice(p.listPrice)}
+            </div>
             <div className="property-info-address">
               {p.address.streetNumber} {p.address.streetName.toLowerCase()},{' '}
               {p.address.state === 'Texas' ? 'TX' : p.address.state}

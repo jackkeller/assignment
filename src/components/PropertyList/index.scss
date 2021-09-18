@@ -10,7 +10,9 @@
   &-photo {
     background-position: center;
     background-size: cover;
+    border-radius: var(--border-radius);
     padding-bottom: 75%;
+    position: relative;
     width: 100%;
   }
 
@@ -21,6 +23,10 @@
       font-size: var(--spacing5);
       font-weight: 600;
       padding-bottom: var(--spacing2);
+    }
+
+    &-price {
+      font: var(--heading3);
     }
 
     &-address {

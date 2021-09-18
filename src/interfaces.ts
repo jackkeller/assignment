@@ -2,6 +2,7 @@ export interface Properties {
   address: Address;
   listPrice: number;
   listDate: string;
+  listingId: string;
   mlsId: number;
   photos: Photos;
   property: Property;
