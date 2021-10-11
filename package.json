@@ -17,7 +17,7 @@
   "repository": "https://github.com/jackkeller/assignment.git",
   "author": "Jack Keller",
   "dependencies": {
-    "bootstrap": "5.1.1",
+    "bootstrap": "5.1.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "5.2.1",
